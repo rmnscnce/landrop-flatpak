@@ -1,0 +1,58 @@
+app-id: app.landrop.LANDrop
+default-branch: stable
+runtime: org.kde.Platform
+runtime-version: 5.15-21.08
+sdk: org.kde.Sdk
+command: landrop
+
+finish-args:
+  - --share=network
+  # for tray icons support
+  - --talk-name=org.kde.StatusNotifierWatcher
+  # for X11 support
+  - --share=ipc
+  - --socket=fallback-x11
+  # for Wayland support
+  - --socket=wayland
+  - --device=dri
+
+modules:
+  - name: libsodium
+    make-args:
+      - PREFIX=/app
+    make-install-args:
+      - PREFIX=/app
+    cleanup:
+      - "/include"
+      - "*.a"
+      - "*.la"
+    sources:
+      - type: git
+        url: https://github.com/jedisct1/libsodium
+        tag: 1.0.18
+        x-checker-data:
+          - type: anitya
+            project-id: 1728
+            url-template: https://github.com/jedisct1/libsodium/archive/refs/tags/$version.tar.gz
+  - name: landrop
+    buildsystem: qmake
+    builddir: true
+    build-options:
+      env:
+        PREFIX: /app
+    config-opts:
+      - LIBS+=-L/app/lib
+    subdir: LANDrop
+    post-install:
+      - install -Dm644 /app/share/icons/hicolor/scalable/apps/landrop.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - sed -e "s/Icon=landrop/Icon=${FLATPAK_ID}/" /app/share/applications/landrop.desktop > /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm644 ../../app.landrop.LANDrop.appdata.xml /app/share/appdata/app.landrop.LANDrop.appdata.xml
+    sources:
+      - type: file
+        path: app.landrop.LANDrop.appdata.xml
+      - type: git
+        url: https://github.com/LANDrop/LANDrop.git
+        tag: v0.4.0
+        x-checker-data:
+          - type: git
+            tag-pattern: "^v([\\d.]+)$"

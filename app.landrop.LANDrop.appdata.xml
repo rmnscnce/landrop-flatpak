@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+    <id type="desktop">app.landrop.LANDrop</id>
+    <name>LANDrop</name>
+    <developer_name>LANDrop</developer_name>
+    <summary>Drop any files to any devices on your LAN</summary>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>BSD-3-Clause</project_license>
+    <url type="homepage">https://landrop.app/</url>
+    <url type="bugtracker">https://github.com/LANDrop/LANDrop/issues</url>
+    <icon type="remote" height="256" width="256">https://landrop.app/img/LANDrop.svg</icon>
+    <description>
+        <p>Drop any files to any devices on your LAN. No need to use instant messaging for that anymore.</p>
+        <p>LANDrop is a cross-platform tool that you can use to conveniently transfer photos, videos, and other types of files to other devices on the same local network.</p>
+        <p>Features:</p>
+        <ul>
+            <li>Cross platform: when we say it, we mean it. iOS, Android, macOS, Windows, Linux, name yours.</li>
+            <li>Ultra fast: uses your local network for transferring. Internet speed is not a limit.</li>
+            <li>Easy to use: intuitive UI. You know how to use it when you see it.</li>
+            <li>Secure: uses state-of-the-art cryptography algorithm. No one else can see your files.</li>
+            <li>No cellular data: outside? No problem. LANDrop can work on your personal hotspot, without consuming cellular data.</li>
+            <li>No compression: doesn't compress your photos and videos when sending.</li>
+        </ul>
+    </description>
+    <screenshots>
+        <screenshot type="default">
+            <image type="source">https://gitlab.com/rmnscnce/vault/uploads/0d9f3d18ad4b1cd7ea043f334617e650/image.png</image>
+            <caption>LANDrop tray menu</caption>
+        </screenshot>
+        <screenshot>
+            <image type="source">https://gitlab.com/rmnscnce/vault/uploads/f1ac255590e35e3989e40f229c42b911/image.png</image>
+            <caption>Sending files using LANDrop</caption>
+        </screenshot>
+        <screenshot>
+            <image type="source">https://gitlab.com/rmnscnce/vault/uploads/e8ab067f168ff59104eb680b396881f9/image.png</image>
+            <caption>LANDrop settings menu</caption>
+        </screenshot>
+    </screenshots>
+    <categories>
+        <category>Network</category>
+    </categories>
+    <releases>
+        <release version="0.4.0" date="2021-06-10"></release>
+    </releases>
+    <content_rating type="oars-1.1">
+        <content_attribute id="violence-cartoon">none</content_attribute>
+        <content_attribute id="violence-fantasy">none</content_attribute>
+        <content_attribute id="violence-realistic">none</content_attribute>
+        <content_attribute id="violence-bloodshed">none</content_attribute>
+        <content_attribute id="violence-sexual">none</content_attribute>
+        <content_attribute id="violence-desecration">none</content_attribute>
+        <content_attribute id="violence-slavery">none</content_attribute>
+        <content_attribute id="violence-worship">none</content_attribute>
+        <content_attribute id="drugs-alcohol">none</content_attribute>
+        <content_attribute id="drugs-narcotics">none</content_attribute>
+        <content_attribute id="drugs-tobacco">none</content_attribute>
+        <content_attribute id="sex-nudity">none</content_attribute>
+        <content_attribute id="sex-themes">none</content_attribute>
+        <content_attribute id="sex-homosexuality">none</content_attribute>
+        <content_attribute id="sex-prostitution">none</content_attribute>
+        <content_attribute id="sex-adultery">none</content_attribute>
+        <content_attribute id="sex-appearance">none</content_attribute>
+        <content_attribute id="language-profanity">none</content_attribute>
+        <content_attribute id="language-humor">none</content_attribute>
+        <content_attribute id="language-discrimination">none</content_attribute>
+        <content_attribute id="social-chat">none</content_attribute>
+        <content_attribute id="social-info">none</content_attribute>
+        <content_attribute id="social-audio">none</content_attribute>
+        <content_attribute id="social-location">none</content_attribute>
+        <content_attribute id="social-contacts">none</content_attribute>
+        <content_attribute id="money-purchasing">none</content_attribute>
+        <content_attribute id="money-gambling">none</content_attribute>
+    </content_rating>
+    <update_contact>rmnscnce_at_ya.ru</update_contact>
+</application>
