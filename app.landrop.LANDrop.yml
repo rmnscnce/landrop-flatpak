@@ -8,12 +8,16 @@ command: landrop
 finish-args:
   - --share=network
   # for receiving files
-  - --filesystem=xdg-download/LANDrop:create
+  - --filesystem=home       # allow users to put the file download location anywhere they so desire in the home folder
+  - --filesystem=/media     # allow users to put the file download location on the removable media they have mounted
+  - --filesystem=/mnt       # ditto
+  - --filesystem=/run/media # ditto
   # for tray icons support
   - --talk-name=org.kde.StatusNotifierWatcher
   # for X11 support
   - --share=ipc
-  - --socket=fallback-x11
+  - --socket=x11
+  - --socket=fallback-x11 # do not use X11 on Wayland
   # for Wayland support
   - --socket=wayland
   - --device=dri
