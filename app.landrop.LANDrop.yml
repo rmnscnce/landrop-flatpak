@@ -16,7 +16,7 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher
   # for X11 support
   - --share=ipc
-  - --socket=x11
+  - --socket=x11 # needed for older Flatpak versions. see https://github.com/flathub/org.gnome.Boxes/issues/5
   - --socket=fallback-x11 # do not use X11 on Wayland
   # for Wayland support
   - --socket=wayland
