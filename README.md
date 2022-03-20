@@ -9,5 +9,6 @@ What works
   - [x] Send files
     - [ ] Drag-and-drop files
   - [x] Receive files
-    - [ ] Save received file 
-- [ ] "Open downloads folder"
+    - [x] Save received file (fixed in b1ca379)
+      - [ ] Gracefully expose other folders (instead of the default `xdg-download/LANDrop`) for download destionation
+- [x] "Open downloads folder" (fixed in b1ca379)
